@@ -1,6 +1,9 @@
+
+[View docs here](http://sia-ssg.github.io/docs)
+
 # Sia Documentation Site
 
-This is the documentation site for [Sia](https://github.com/terrymooreii/sia), built with Sia itself.
+This is the documentation site for [Sia](https://github.com/sia-ssg/sia), built with Sia itself.
 
 ## Development
 
