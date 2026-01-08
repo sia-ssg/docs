@@ -1,0 +1,13 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a href="{{ '/' | url }}">Home</a>
+    </li>
+    {% if page.url != '/' %}
+      <li class="breadcrumb-item">
+        <span aria-current="page">{{ page.title }}</span>
+      </li>
+    {% endif %}
+  </ol>
+</nav>
+

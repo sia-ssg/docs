@@ -1,0 +1,32 @@
+{# Core meta tags - include this in your theme's <head> #}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ page.excerpt or page.description or site.description }}">
+<meta name="author" content="{{ page.author or site.author }}">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+{# Open Graph #}
+{% set siteOrigin = site.url | replace(site.basePath, '') if site.basePath else site.url %}
+<meta property="og:title" content="{{ page.title or site.title }}">
+<meta property="og:description" content="{{ page.excerpt or page.description or site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ siteOrigin }}{{ page.url if page.url else ('/' | url) }}">
+<meta property="og:site_name" content="{{ site.title }}">
+{% if page.image %}
+<meta property="og:image" content="{{ siteOrigin }}{{ page.image | url }}">
+{% endif %}
+
+{# Twitter Card #}
+<meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ page.title or site.title }}">
+<meta name="twitter:description" content="{{ page.excerpt or page.description or site.description }}">
+{% if page.image %}
+<meta name="twitter:image" content="{{ siteOrigin }}{{ page.image | url }}">
+{% endif %}
+
+{# RSS Feed #}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url }}">
+
+{# Canonical URL #}
+<link rel="canonical" href="{{ siteOrigin }}{{ page.url if page.url else ('/' | url) }}">
+

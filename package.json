@@ -1,0 +1,15 @@
+{
+  "name": "sia-docs",
+  "version": "1.0.0",
+  "description": "Documentation site for Sia static site generator",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "sia dev",
+    "build": "sia build",
+    "new": "sia new"
+  },
+  "dependencies": {
+    "@terrymooreii/sia": "^2.3.1"
+  }
+}

@@ -1,0 +1,7 @@
+{# Custom JavaScript files - include before </body> #}
+{% if config.assets and config.assets.js %}
+{% for js in config.assets.js %}
+<script src="{{ js | url }}"></script>
+{% endfor %}
+{% endif %}
+

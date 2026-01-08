@@ -1,0 +1,128 @@
+<aside class="docs-sidebar">
+  <div class="sidebar-header">
+    <a href="{{ '/' | url }}" class="sidebar-logo">
+      <span class="logo-text">{{ site.title }}</span>
+    </a>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <a href="{{ '/' | url }}" class="nav-item {% if page.url == '/' %}active{% endif %}">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Getting Started</div>
+      <a href="{{ '/getting-started/' | url }}" class="nav-item {% if page.url == '/getting-started/' %}active{% endif %}">
+        <span>Overview</span>
+      </a>
+      <a href="{{ '/getting-started/installation/' | url }}" class="nav-item nav-item-nested {% if page.url == '/getting-started/installation/' %}active{% endif %}">
+        <span>Installation</span>
+      </a>
+      <a href="{{ '/getting-started/first-site/' | url }}" class="nav-item nav-item-nested {% if page.url == '/getting-started/first-site/' %}active{% endif %}">
+        <span>Your First Site</span>
+      </a>
+      <a href="{{ '/getting-started/project-structure/' | url }}" class="nav-item nav-item-nested {% if page.url == '/getting-started/project-structure/' %}active{% endif %}">
+        <span>Project Structure</span>
+      </a>
+    </div>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Guides</div>
+      <a href="{{ '/guides/' | url }}" class="nav-item {% if page.url == '/guides/' %}active{% endif %}">
+        <span>Overview</span>
+      </a>
+      <a href="{{ '/guides/creating-content/' | url }}" class="nav-item nav-item-nested {% if page.url == '/guides/creating-content/' %}active{% endif %}">
+        <span>Creating Content</span>
+      </a>
+      <a href="{{ '/guides/images-assets/' | url }}" class="nav-item nav-item-nested {% if page.url == '/guides/images-assets/' %}active{% endif %}">
+        <span>Images & Assets</span>
+      </a>
+      <a href="{{ '/guides/customizing-themes/' | url }}" class="nav-item nav-item-nested {% if page.url == '/guides/customizing-themes/' %}active{% endif %}">
+        <span>Customizing Themes</span>
+      </a>
+      <a href="{{ '/guides/advanced-config/' | url }}" class="nav-item nav-item-nested {% if page.url == '/guides/advanced-config/' %}active{% endif %}">
+        <span>Advanced Config</span>
+      </a>
+      <a href="{{ '/guides/deployment/' | url }}" class="nav-item nav-item-nested {% if page.url == '/guides/deployment/' %}active{% endif %}">
+        <span>Deployment</span>
+      </a>
+    </div>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Reference</div>
+      <a href="{{ '/reference/' | url }}" class="nav-item {% if page.url == '/reference/' %}active{% endif %}">
+        <span>Overview</span>
+      </a>
+      <a href="{{ '/reference/cli/' | url }}" class="nav-item nav-item-nested {% if page.url == '/reference/cli/' %}active{% endif %}">
+        <span>CLI Commands</span>
+      </a>
+      <a href="{{ '/reference/configuration/' | url }}" class="nav-item nav-item-nested {% if page.url == '/reference/configuration/' %}active{% endif %}">
+        <span>Configuration</span>
+      </a>
+      <a href="{{ '/reference/front-matter/' | url }}" class="nav-item nav-item-nested {% if page.url == '/reference/front-matter/' %}active{% endif %}">
+        <span>Front Matter</span>
+      </a>
+      <a href="{{ '/reference/templates/' | url }}" class="nav-item nav-item-nested {% if page.url == '/reference/templates/' %}active{% endif %}">
+        <span>Templates</span>
+      </a>
+      <a href="{{ '/reference/markdown/' | url }}" class="nav-item nav-item-nested {% if page.url == '/reference/markdown/' %}active{% endif %}">
+        <span>Markdown</span>
+      </a>
+    </div>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Plugins</div>
+      <a href="{{ '/plugins/' | url }}" class="nav-item {% if page.url == '/plugins/' %}active{% endif %}">
+        <span>Overview</span>
+      </a>
+      <a href="{{ '/plugins/creating-plugins/' | url }}" class="nav-item nav-item-nested {% if page.url == '/plugins/creating-plugins/' %}active{% endif %}">
+        <span>Creating Plugins</span>
+      </a>
+      <a href="{{ '/plugins/configuration/' | url }}" class="nav-item nav-item-nested {% if page.url == '/plugins/configuration/' %}active{% endif %}">
+        <span>Configuration</span>
+      </a>
+      <a href="{{ '/plugins/hooks/' | url }}" class="nav-item nav-item-nested {% if page.url == '/plugins/hooks/' %}active{% endif %}">
+        <span>Hooks</span>
+      </a>
+      <a href="{{ '/plugins/api/' | url }}" class="nav-item nav-item-nested {% if page.url == '/plugins/api/' %}active{% endif %}">
+        <span>API</span>
+      </a>
+      <a href="{{ '/plugins/structure/' | url }}" class="nav-item nav-item-nested {% if page.url == '/plugins/structure/' %}active{% endif %}">
+        <span>Structure</span>
+      </a>
+    </div>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Themes</div>
+      <a href="{{ '/themes/' | url }}" class="nav-item {% if page.url == '/themes/' %}active{% endif %}">
+        <span>Overview</span>
+      </a>
+      <a href="{{ '/themes/creating-themes/' | url }}" class="nav-item nav-item-nested {% if page.url == '/themes/creating-themes/' %}active{% endif %}">
+        <span>Creating Themes</span>
+      </a>
+      <a href="{{ '/themes/customizing/' | url }}" class="nav-item nav-item-nested {% if page.url == '/themes/customizing/' %}active{% endif %}">
+        <span>Customizing</span>
+      </a>
+    </div>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">More</div>
+      <a href="{{ '/examples/' | url }}" class="nav-item {% if page.url == '/examples/' %}active{% endif %}">
+        <span>Examples</span>
+      </a>
+      <a href="{{ '/api/' | url }}" class="nav-item {% if page.url == '/api/' %}active{% endif %}">
+        <span>API</span>
+      </a>
+      <a href="{{ '/community/' | url }}" class="nav-item {% if page.url == '/community/' %}active{% endif %}">
+        <span>Community</span>
+      </a>
+    </div>
+  </nav>
+</aside>
+

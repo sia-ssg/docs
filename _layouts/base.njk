@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "meta.njk" %}
+  {% include "theme-script.njk" %}
+  
+  <link rel="stylesheet" href="{{ '/styles/docs.css' | url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  {% include "custom-assets-css.njk" %}
+  
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="docs-layout">
+    {% include "docs-sidebar.njk" %}
+    
+    <div class="docs-main">
+      {% include "docs-header.njk" %}
+      
+      <main class="docs-content">
+        {% block content %}{% endblock %}
+      </main>
+      
+      {% include "docs-footer.njk" %}
+    </div>
+  </div>
+  {% include "custom-assets-js.njk" %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>
+

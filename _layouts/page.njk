@@ -1,0 +1,29 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<article class="docs-page">
+  {% include "breadcrumbs.njk" %}
+  
+  <div class="docs-page-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="docs-page-description">{{ page.description }}</p>
+    {% endif %}
+  </div>
+  
+  <div class="docs-page-body">
+    <div class="docs-content-main">
+      {{ content | safe }}
+      
+      {% include "prev-next.njk" %}
+    </div>
+    
+    {% if page.showToc !== false %}
+    <aside class="docs-toc-wrapper">
+      {% include "toc.njk" %}
+    </aside>
+    {% endif %}
+  </div>
+</article>
+{% endblock %}
+

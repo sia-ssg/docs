@@ -1,0 +1,31 @@
+site:
+  title: "Sia Documentation"
+  description: "Complete documentation for Sia static site generator"
+  url: "https://docs.sia.dev"
+  author: "Sia Team"
+
+theme:
+  name: docs
+
+plugins:
+  enabled: true          # Master switch (default: true)
+  strictMode: true      # Fail build on plugin errors (default: false)
+
+input: src
+output: dist
+
+collections:
+  pages:
+    path: pages
+    layout: page
+    permalink: /:slug/
+    sortBy: order
+
+server:
+  port: 3000
+  showDrafts: false
+
+assets:
+  js:
+    - /assets/copy-code.js
+    - /assets/sidebar-scroll.js

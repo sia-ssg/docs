@@ -1,0 +1,41 @@
+<nav class="docs-prev-next">
+  {% set allPages = collections.pages | sortBy('order', 'asc') %}
+  {% set prevPage = null %}
+  {% set nextPage = null %}
+  {% set foundCurrent = false %}
+  
+  {% for p in allPages %}
+    {% if p.url == page.url %}
+      {% set foundCurrent = true %}
+    {% elif foundCurrent %}
+      {% if not nextPage %}
+        {% set nextPage = p %}
+      {% endif %}
+    {% else %}
+      {% set prevPage = p %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if foundCurrent %}
+    <div class="prev-next-wrapper">
+      {% if prevPage %}
+        <a href="{{ prevPage.url | url }}" class="prev-next-link prev-link">
+          <span class="prev-next-label">Previous</span>
+          <span class="prev-next-title">{{ prevPage.title }}</span>
+        </a>
+      {% else %}
+        <div class="prev-next-link prev-link disabled"></div>
+      {% endif %}
+      
+      {% if nextPage %}
+        <a href="{{ nextPage.url | url }}" class="prev-next-link next-link">
+          <span class="prev-next-label">Next</span>
+          <span class="prev-next-title">{{ nextPage.title }}</span>
+        </a>
+      {% else %}
+        <div class="prev-next-link next-link disabled"></div>
+      {% endif %}
+    </div>
+  {% endif %}
+</nav>
+
