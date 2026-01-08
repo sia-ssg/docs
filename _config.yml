@@ -1,7 +1,7 @@
 site:
   title: "Sia Documentation"
   description: "Complete documentation for Sia static site generator"
-  url: "https://docs.sia.dev"
+  url: "https://sia-ssg.github.io/docs"
   author: "Sia Team"
 
 theme:
